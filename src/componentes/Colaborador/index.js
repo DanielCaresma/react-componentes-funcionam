@@ -3,10 +3,10 @@ import './colaborador.css'
 
 const Colaborador = ({ colaborador, corDeFundo, aoDeletar }) => {
     return (<div className="colaborador">
-        <AiFillCloseCircle 
+        <AiFillCloseCircle
             size={25}
             className='deletar'
-            onClick={aoDeletar}
+            onClick={() => aoDeletar(colaborador.id)}
         />
         <div className="cabecalho" style={{ backgroundColor: corDeFundo }}>
             <img src={colaborador.imagem} alt={colaborador.nome} />
